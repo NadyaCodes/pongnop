@@ -4,15 +4,20 @@ import { useState, useEffect } from 'react'
 export default function Table() {
   const [position, setPosition] = useState('0')
 
-
   const handleUserKeyPress = (e) => {
     let num =  Number(position)
+
     if (e.key === "ArrowUp") {
-      num--
+      if (num > 0) {
+        num -= 15
+      }
     }
 
     if (e.key === "ArrowDown") {
-      num++
+      if (num < 330) {
+        num += 15
+      }
+
     }
     setPosition(num.toString())
   }

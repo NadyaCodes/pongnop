@@ -1,8 +1,8 @@
 .table {
   border: .3rem solid black;
-  width: 80vw;
-  height: 80vw;
-  max-height: 80vh;
+  width: 600px;
+  height: 400px;
+  /* max-height: 80vh; */
   margin: auto;
   display: flex;
   justify-content: space-between;
