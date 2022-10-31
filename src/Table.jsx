@@ -1,4 +1,5 @@
 import Paddle from './Paddle'
+import Ball from './Ball'
 import { useState, useEffect } from 'react'
 
 export default function Table() {
@@ -36,6 +37,7 @@ useEffect(() => {
   return(
     <div className='table'>
       <Paddle side='left' distance='0' />
+      <Ball x='0' y='0' />
       <Paddle side='right' distance={position}/>
     </div>
   )

@@ -15,6 +15,13 @@
   background-color: black
 }
 
+.ball {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: black;
+}
+
 /* .App {
   text-align: center;
 }
