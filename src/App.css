@@ -20,8 +20,26 @@
   height: 15px;
   border-radius: 50%;
   background-color: black;
+  animation: 3s bounce infinite linear;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(300px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 /* .App {
   text-align: center;
 }
