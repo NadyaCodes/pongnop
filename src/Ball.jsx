@@ -1,13 +1,8 @@
-import { useState } from "react"
-export default function Ball(props) {
-  const {y} = props
 
-  const [angle, setAngle] = useState(y)
-
-  
+export default function Ball() {
 
   return(
-    <div className='ball' style={{transform: `translateY(${angle}px)`}}>
+    <div className='ball'>
     </div>
   )
 }

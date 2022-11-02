@@ -20,26 +20,35 @@
   height: 15px;
   border-radius: 50%;
   background-color: black;
-  animation: 3s bounce infinite linear;
+  position: relative;
+  animation: moveX 2.5s linear 0s infinite alternate, 
+  moveY 3s linear 0s infinite alternate;
 }
 
-@keyframes bounce {
+  @keyframes moveX {
+    from { left: 300px; } to { left: -300px; }
+  }
+  @keyframes moveY {
+    from { top: -10px; } to { top: 390px; }
+  }
+
+/* @keyframes bounce {
   0% {
-    transform: translateX(0px);
+    transform: translate(0px);
   }
   25% {
-    transform: translateX(300px);
+    transform: translate(300px);
   }
   50% {
-    transform: translateX(0px);
+    transform: translate(0px);
   }
   75% {
-    transform: translateX(-300px);
+    transform: translate(-300px);
   }
   100% {
-    transform: translateX(0px);
+    transform: translate(0px);
   }
-}
+} */
 /* .App {
   text-align: center;
 }
