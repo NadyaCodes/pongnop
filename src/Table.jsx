@@ -64,7 +64,7 @@ const paddleRef = useRef();
 
   return(
     <div className='table'>
-      <Paddle side='left' distance='0' />
+      <Paddle side='left' distance='0'/>
       <div ref={ballRef}><Ball x='0' y='0'/></div>
       <div ref={paddleRef}><Paddle side='right' distance={position}/></div>
     </div>

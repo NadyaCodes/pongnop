@@ -32,6 +32,10 @@
     from { top: -10px; } to { top: 390px; }
   }
 
+div.paddle.paddle\=left {
+  visibility: hidden;
+}
+
 /* @keyframes bounce {
   0% {
     transform: translate(0px);
