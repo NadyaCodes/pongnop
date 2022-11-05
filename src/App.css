@@ -12,7 +12,7 @@
 .paddle {
   width: 1rem;
   height: 4rem;
-  background-color: black
+  background-color: rgb(225, 225, 24);
 }
 
 .ball {
