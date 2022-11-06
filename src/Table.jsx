@@ -1,40 +1,37 @@
-import Paddle from './Paddle'
-import Ball from './Ball'
-import { useState, useEffect, useRef } from 'react'
+import Paddle from "./Paddle";
+import Ball from "./Ball";
+import { useState, useEffect, useRef } from "react";
 
 export default function Table() {
-  const [position, setPosition] = useState('0')
+  const [position, setPosition] = useState("0");
 
   const handleUserKeyPress = (e) => {
-    let num =  Number(position)
+    let num = Number(position);
 
     if (e.key === "ArrowUp") {
       if (num > 0) {
-        num -= 15
+        num -= 15;
       }
     }
 
     if (e.key === "ArrowDown") {
       if (num < 330) {
-        num += 15
+        num += 15;
       }
-
     }
-    setPosition(num.toString())
-  }
-
-
-useEffect(() => {
-  window.addEventListener('keydown', handleUserKeyPress);
-
-  return () => {
-    window.removeEventListener('keydown', handleUserKeyPress);
+    setPosition(num.toString());
   };
-});
 
-const ballRef = useRef();
-const paddleRef = useRef();
+  useEffect(() => {
+    window.addEventListener("keydown", handleUserKeyPress);
 
+    return () => {
+      window.removeEventListener("keydown", handleUserKeyPress);
+    };
+  });
+
+  const ballRef = useRef();
+  const paddleRef = useRef();
 
   // X
   const [ballX, setBallX] = useState(0);
@@ -49,24 +46,23 @@ const paddleRef = useRef();
 
     const posY = ballRef.current.offsetTop;
     setBallY(posY);
-    console.log(ballX, ballY)
+    console.log(ballX, ballY);
   };
 
   // Get the position of the red box in the beginning
   useEffect(() => {
     getPosition();
-
   });
 
-
-
-
-
-  return(
-    <div className='table'>
-      <Paddle side='left' distance='0'/>
-      <div ref={ballRef}><Ball x='0' y='0'/></div>
-      <div ref={paddleRef}><Paddle side='right' distance={position}/></div>
+  return (
+    <div className="table">
+      <Paddle side="left" distance="0" />
+      <div ref={ballRef}>
+        <Ball x="0" y="0" />
+      </div>
+      <div ref={paddleRef}>
+        <Paddle side="right" distance={position} />
+      </div>
     </div>
-  )
+  );
 }

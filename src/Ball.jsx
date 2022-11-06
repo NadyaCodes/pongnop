@@ -1,8 +1,3 @@
-
 export default function Ball() {
-
-  return(
-    <div className='ball'>
-    </div>
-  )
+  return <div className="ball"></div>;
 }
